@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.notes {
+  margin: 20px 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.notes__top {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.notes__top__update {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  line-height: 0;
+  color: #0cb330;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notes__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.note {
+  position: relative;
+  width: 250px;
+  padding: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.note__delete {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  line-height: 0;
+  color: #ff3131;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.notes__form {
+  position: relative;
+  width: 350px;
+}
+
+.notes__form__textarea {
+  display: block;
+  width: 350px;
+  height: 120px;
+  margin-top: 10px;
+  padding: 20px;
+  resize: none;
+}
+
+.notes__form__add {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  line-height: 0;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
 }
